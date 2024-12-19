@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction of Heart Diseases</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h2>Heart Disease Prediction</h2>
+        </div>
+        <ul>
+            <li><a href="#about-heart">About Heart</a></li>
+            <li><a href="#heart-diseases">Heart Diseases</a></li>
+            <li><a href="#prevention">Prevention</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="model-container">
+            <video id="heart-video" src="human_heart2.mp4" autoplay loop muted></video>
+        </div>
+        <div class="form-container">
+            <h1>Prediction of Heart Diseases</h1>
+            <form action="/submit" method="POST">
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" id="Name" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="sex">Sex</label>
+                    <select id="sex" name="sex" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="chest_pain_type">Chest Pain Type</label>
+                    <input type="text" id="chest_pain_type" name="chest_pain_type" required>
+                </div>
+                <div class="form-group">
+                    <label for="bp">Blood Pressure (BP)</label>
+                    <input type="number" id="bp" name="bp" required>
+                </div>
+                <div class="form-group">
+                    <label for="cholesterol">Cholesterol</label>
+                    <input type="number" id="cholesterol" name="cholesterol" required>
+                </div>
+                <div class="form-group">
+                    <label for="fbs_over_120">Fasting Blood Sugar Over 120 (FBS)</label>
+                    <select id="fbs_over_120" name="fbs_over_120" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ekg_results">Electrocardiogram (EKG) Results</label>
+                    <input type="text" id="ekg_results" name="ekg_results" required>
+                </div>
+                <div class="form-group">
+                    <label for="max_hr">Maximum Heart Rate (Max HR)</label>
+                    <input type="number" id="max_hr" name="max_hr" required>
+                </div>
+                <div class="form-group">
+                    <label for="exercise_angina">Exercise-induced Angina</label>
+                    <select id="exercise_angina" name="exercise_angina" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="st_depression">ST Depression</label>
+                    <input type="number" step="0.1" id="st_depression" name="st_depression" required>
+                </div>
+                <div class="form-group">
+                    <label for="slope_of_st">Slope of ST Segment</label>
+                    <input type="text" id="slope_of_st" name="slope_of_st" required>
+                </div>
+                <div class="form-group">
+                    <label for="number_of_vessels">Number of Vessels Fluoroscoped</label>
+                    <input type="number" id="number_of_vessels" name="number_of_vessels" required>
+                </div>
+                <div class="form-group">
+                    <label for="thallium">Thallium Test Results</label>
+                    <input type="text" id="thallium" name="thallium" required>
+                </div>
+                <div class="form-group">
+                    <label for="heart_disease">Presence of Heart Disease</label>
+                    <select id="heart_disease" name="heart_disease" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
